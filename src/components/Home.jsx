@@ -14,7 +14,7 @@ export default class Home extends Component{
                     <h2>Enjoy Your Dream Vacation</h2>
                     <h3>Travel to the any corner of the world, without going around in circles.</h3>
                     <Link to="/services">
-                    <Button bsStyle="primary">More</Button></Link>
+                    <Button bsStyle="secondary">More</Button></Link>
                 </Jumbotron>
                 </Grid>
                 </div>                 
