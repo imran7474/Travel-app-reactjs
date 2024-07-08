@@ -1,0 +1,15 @@
+# service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: travel-app-service
+  labels:
+    app: travel-app
+spec:
+  type: NodePort
+  selector:
+    app: travel-app
+  ports:
+  - port: 3000      # The port your application uses
+    targetPort: 3000  # The port your application is listening on
+    nodePort: 32000   # NodePort range is typically 30000-32767. Adjust as needed.

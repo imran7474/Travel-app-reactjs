@@ -1,0 +1,22 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: travel-app-deployment
+  labels:
+    app: travel-app
+spec:
+  replicas: 2  # Adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: travel-app
+  template:
+    metadata:
+      labels:
+        app: travel-app
+    spec:
+      containers:
+      - name: travel-app
+        image: imran177/travel-app:latest
+        ports:
+        - containerPort: 3000  # Adjust to the port your app runs on inside the container
