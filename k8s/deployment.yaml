@@ -4,7 +4,7 @@ metadata:
   name: reactjs-app
   namespace: dev
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: reactjs-app
