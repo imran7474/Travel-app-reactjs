@@ -1,22 +1,20 @@
-# deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: travel-app-deployment
-  labels:
-    app: travel-app
+  name: reactjs-app
+  namespace: dev
 spec:
-  replicas: 2  # Adjust the number of replicas as needed
+  replicas: 2
   selector:
     matchLabels:
-      app: travel-app
+      app: reactjs-app
   template:
     metadata:
       labels:
-        app: travel-app
+        app: reactjs-app
     spec:
       containers:
-      - name: travel-app
-        image: imran177/travel-app:latest
+      - name: reactjs-app
+        image: imran177/travel-app
         ports:
-        - containerPort: 3000  # Adjust to the port your app runs on inside the container
+        - containerPort: 80
